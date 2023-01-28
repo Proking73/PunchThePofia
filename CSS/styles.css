@@ -14,8 +14,17 @@ body, html {
     display:flex;
     align-items:center;
     justify-content: center;
+    flex-direction: column;
+    gap:5vh;
 }
 h1 {
-    font-size:48px;
+    text-align:center;
+    font-size: 5vmin;
     font-family: Atari, 'Courier new', Courier, monospace;
+}
+
+p.subtitle {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 3vmin;
+    font-weight: 600;
 }
