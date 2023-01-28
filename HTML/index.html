@@ -10,9 +10,20 @@
     <script src="/JS/script.js" defer></script>
 </head>
 <body>
-    <audio src="/Music\Intro-8-Bit-Music.webm" autoplay class="IntroMusic"></audio>
-    <input type="range" min="0.0" max="1.0">
+    <!-- Typewriter effect -->
     <h1>Welcome to Punch the Pofia</h1>
+    <!-- Slide for bottom, ease-in -->
     <p class="subtitle">Take your anger out on digital characters!</p>
+    
+    <audio src="/Music\Intro-8-Bit-Music.webm" autoplay class="IntroMusic"></audio>
+    
+    <div class="settings">
+        <img src="/CSS/Images/settings.png" alt="Settings icon" class="setting-icon">
+
+        <div class="settings-modal">
+            <!-- Style the input element slider -->
+            <input type="range" min="0" max="100" value="50" class="volume">
+        </div>
+    </div>
 </body>
 </html>
