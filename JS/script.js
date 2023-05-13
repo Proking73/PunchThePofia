@@ -1,6 +1,6 @@
 const volume = document.querySelector("input.volume");
 const IntroMusic = document.querySelector(".IntroMusic");
-const settings_icon = document.querySelector(".settings-icon");
+const settings_icon = document.querySelector(".setting-icon");
 const settings_modal = document.querySelector(".settings-modal");
 
 volume.addEventListener('mousemove', () => {
@@ -8,5 +8,11 @@ volume.addEventListener('mousemove', () => {
 });
 
 settings_icon.addEventListener('click', () => {
-    settings_modal.style.display = "block";
+    let state = settings_modal.style.display;
+    console.log(state);
+    if (state == "") {
+        settings_modal.style.display = " block";
+    } else {
+        settings_modal.style.display = "";
+    }
 });
