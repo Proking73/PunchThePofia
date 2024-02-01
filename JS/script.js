@@ -11,7 +11,7 @@ settings_icon.addEventListener('click', () => {
     let state = settings_modal.style.display;
     console.log(state);
     if (state == "") {
-        settings_modal.style.display = " block";
+        settings_modal.style.display = " flex";
     } else {
         settings_modal.style.display = "";
     }
