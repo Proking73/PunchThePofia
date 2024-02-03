@@ -2,4 +2,8 @@
     --color1: hsl(333, 90%, 50%);
     --color2: hsl(333, 100%, 65%); 
     --color3: hsl(333, 100%, 97%); 
+
+    /* Fix variable for slider responsive height */
+    /* Clamp width (vmax, %/vw/vh, vmin) */
+    --settingsBaseWidth: 32vw;
 }

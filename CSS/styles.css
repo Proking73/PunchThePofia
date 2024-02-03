@@ -1,4 +1,5 @@
 /* -webkit- version for all necessary elements (transition and more) */
+/* Fix zoom and only blur increasing */
 @font-face {
     font-family: Atari;
     src: url(AtariFontFullVersion-ZJ23.ttf);
@@ -25,13 +26,16 @@ body, html {
     color: var(--color1);
 }
 
+/* Settings page */
 h1 {
     text-align:center;
     font-size: 5vmin;
     font-family: Atari, monospace, Courier;
     position: relative;
 }
-
+h2 {
+    font-size: 3.5vmin;
+}
 
 p.subtitle {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, monospace;
@@ -47,6 +51,7 @@ p.subtitle:hover {
     cursor: pointer;
 }
 
+/* Settings */
 .setting-icon {
     width: 5vmin;
     position: absolute;
@@ -61,13 +66,14 @@ p.subtitle:hover {
     /* Deg has to be x60[60-360] */
     transform: rotate(180deg);
 }
+/* (X/<-) In the top left/right of modal or tap settings to exit */
 .settings-modal {
     display: none;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
 
-    width: 50%;
+    width: var(--settingsBaseWidth);
     height: 70%;
     
     position: absolute;
@@ -76,8 +82,10 @@ p.subtitle:hover {
     transform: translate(-50%, -50%);
     
     background-color: white;
-    box-shadow: 0 0 3px 0 var(--color1);
+    box-shadow: 0 0 0.2vmax 0 var(--color1);
 }
+
+/* Make a class for input[type=range] */
 input[type=range] {
     -webkit-appearance: none;
     appearance: none;
@@ -85,6 +93,20 @@ input[type=range] {
     /* moves only in increment of 100% width / 10 (width of box)  */
     outline: 0.1vw solid var(--color2);
 }
+input[type=range]:hover {
+    /* More bold outline (0.2vw)? */
+    outline: 0.1vw solid var(--color1);
+    cursor: pointer;
+}
+.volume::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: calc((var(--settingsBaseWidth) * 0.8) / 10);
+    height: calc((var(--settingsBaseWidth) * 0.8) / 10);
+    background: var(--color1);
+    cursor: pointer;
+}
+
 .volume {
-    width: 80%;
+    width: calc(var(--settingsBaseWidth) * 0.8);
 }
