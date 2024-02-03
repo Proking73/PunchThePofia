@@ -1,7 +1,9 @@
+// Adjust below variable for new classname (volumeSliders)
 const volume = document.querySelector("input.volume");
 const IntroMusic = document.querySelector(".IntroMusic");
 const settings_icon = document.querySelector(".setting-icon");
 const settings_modal = document.querySelector(".settings-modal");
+const sliders = document.querySelector(".volumeSliders")
 
 volume.addEventListener('mousemove', () => {
     IntroMusic.volume = volume.value / 100;
@@ -16,3 +18,6 @@ settings_icon.addEventListener('click', () => {
         settings_modal.style.display = "";
     }
 });
+
+
+

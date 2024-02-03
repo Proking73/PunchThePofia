@@ -86,27 +86,24 @@ p.subtitle:hover {
 }
 
 /* Make a class for input[type=range] */
-input[type=range] {
+.volumeSliders {
     -webkit-appearance: none;
     appearance: none;
     background: white;
+    width: calc(var(--settingsBaseWidth) * 0.8);
     /* moves only in increment of 100% width / 10 (width of box)  */
     outline: 0.1vw solid var(--color2);
 }
-input[type=range]:hover {
+.volumeSliders:hover {
     /* More bold outline (0.2vw)? */
     outline: 0.1vw solid var(--color1);
     cursor: pointer;
 }
-.volume::-webkit-slider-thumb {
+.volumeSliders::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
     width: calc((var(--settingsBaseWidth) * 0.8) / 10);
     height: calc((var(--settingsBaseWidth) * 0.8) / 10);
     background: var(--color1);
     cursor: pointer;
-}
-
-.volume {
-    width: calc(var(--settingsBaseWidth) * 0.8);
 }
